@@ -138,16 +138,12 @@ bool lazy_merge(int size, unsigned numOfSegments, int noOfThreads) {
 
 int main(int argc, char** argv) {
 
-	for (int w = 2; w <= 128; w *= 2) {
-		for (int r = 2; r <= 32; r *= 2) {
-			int noOfSegments = w; //k value in the k-way merge
-			int array_size = 50000000; //std::pow(2.0, 24);
+	int array_size = 50000000; //std::pow(2.0, 24);
 
-			int numberOfthreads = r;
+	int numberOfthreads = 2;
+	int noOfSegments = 64;
+	lazy_merge(array_size, noOfSegments, numberOfthreads);
 
-			lazy_merge(array_size, noOfSegments, numberOfthreads);
-		}
-	}
 	cout << "\n\nAll tests are Passed!\n";
 	return 0;
 }

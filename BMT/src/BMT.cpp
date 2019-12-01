@@ -285,7 +285,6 @@ int main() {
 	int array_size = std::pow(2.0, 24);
 	int numberOfthreads = 2;
 
-	for (numberOfthreads = 2; numberOfthreads <= 16; numberOfthreads *= 2) {
 		array.clear();
 		segmentsEnds.clear();
 
@@ -304,7 +303,7 @@ int main() {
 		BMTCounter = 0;
 		checkIt(array);
 #endif
-	}
+
 
 	cout << "\n\nAll tests are Passed!\n";
 	return 0;

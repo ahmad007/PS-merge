@@ -36,8 +36,6 @@ bool checkIt(vector<int> a) {
  * @return
  */
 int main() {
-	cout << "Besm Allah" << endl;
-
 	vector<vector<int> > array;
 
 	int noOfSegments = 2; //k value in the k-way merge
